@@ -1,12 +1,15 @@
 import Vue from 'vue';
+import Vuetify from 'vuetify'
 import App from './App.vue';
 import router from './router';
 import store from './store';
 import axios from 'axios'
+import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import './registerServiceWorker';
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios
+Vue.use(Vuetify)
 
 // currency filter
 Vue.filter('toCurrency', function (value: number) {
