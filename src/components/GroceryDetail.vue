@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-  {{ msg }}
+    Visit Id:
+  {{ id }}
   </div>
 </template>
 
@@ -9,7 +10,12 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class GroceryDetail extends Vue {
-  @Prop() private msg!: string;
+private id: number = 0;
+
+mounted() {
+this.id = parseInt(this.$route.params.visitId)
+}
+
 }
 </script>
 

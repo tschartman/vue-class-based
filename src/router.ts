@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import GroceryDetail from '@/components/GroceryDetail.vue'; // @ is an alias to /src
+import GroceryVisits from '@/components/GroceryVisits.vue';
 
 Vue.use(Router);
 
@@ -10,13 +11,13 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home,
+      path: '/visits',
+      name: 'visits',
+      component: GroceryVisits,
     },
     {
-      path: '/groceryDetail',
-      name: 'groceryDetail',
+      path: '/visit/:visitId',
+      name: 'visit',
       component: GroceryDetail,
     },
     {

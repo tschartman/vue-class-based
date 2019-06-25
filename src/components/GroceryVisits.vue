@@ -55,7 +55,7 @@ mounted () {
 }
 
 showVisitDetail(id: number) {
-  console.log(id)
+  this.$router.push({ name: 'visit', params: { visitId: id.toString() } })
 }
 
 
