@@ -2,7 +2,7 @@
         {
             "date" : "2014-03-12" ,
             "store" : "Walmart",
-            "num" : 18,
+            "items" : 18,
             "total" : 67.89,
             "location": "123 somewhere avenue",
             "id": 1
@@ -10,7 +10,7 @@
         {
             "date" : "2018-12-23" ,
             "store" : "hyvee",
-            "num" : 15,
+            "items" : 15,
             "total" : 109.80,
             "location": "456 anywhere street",
             "id": 2
@@ -18,7 +18,7 @@
         {
             "date" : "2019-02-13" ,
             "store" : "Walmart",
-            "num" : 23,
+            "items" : 23,
             "total" : 89.98,
             "location": "123 somewhere avenue",
             "id": 3
@@ -26,7 +26,7 @@
         {
             "date" : "2019-04-23" ,
             "store" : "Aldi",
-            "num" : 18,
+            "items" : 18,
             "total" : 35.45,
             "location": "145 somewhere avenue",
             "id": 4

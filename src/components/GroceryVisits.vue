@@ -28,7 +28,7 @@
               <v-list-tile-content>
                 <v-list-tile-title>{{ visit.store }}</v-list-tile-title>
                 <v-list-tile-sub-title class="text--primary">{{ visit.location }}</v-list-tile-sub-title>
-                <v-list-tile-sub-title>{{ visit.total | toCurrency }} - {{ visit.num }} Items </v-list-tile-sub-title>
+                <v-list-tile-sub-title>{{ visit.total | toCurrency }} - {{ visit.items }} Items </v-list-tile-sub-title>
               </v-list-tile-content>
             </v-list-tile>
           </template>
@@ -40,7 +40,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { IVisit } from '@/interfaces/IVisit.ts'
+import { IVisit } from '@/interfaces/Visit.ts'
 import axios from 'axios';
 
 @Component

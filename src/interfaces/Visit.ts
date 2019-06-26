@@ -1,7 +1,7 @@
 export interface IVisit {
     date: Date,
     store: string,
-    num: number,
+    items: number,
     total: number,
     location: string,
     id: number

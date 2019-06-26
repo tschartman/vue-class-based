@@ -1,19 +1,28 @@
 <template>
   <div class="hello">
-    Visit Id:
-  {{ id }}
+   <div v-for="item in items" v-bind:key="item.id">
+       <div>{{ item.name }}</div>
+   </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { IItem } from '@/interfaces/Item.ts'
+import axios from 'axios';
 
 @Component
 export default class GroceryDetail extends Vue {
+private items: IItem[] = []
 private id: number = 0;
 
 mounted() {
 this.id = parseInt(this.$route.params.visitId)
+
+axios.get('/detail.json')
+ .then((result) => {
+    this.items = result.data
+  })
 }
 
 }
