@@ -1,9 +1,48 @@
 <template>
-  <div class="hello">
-   <div v-for="item in items" v-bind:key="item.id">
-       <div>{{ item.name }}</div>
-   </div>
-  </div>
+ <v-layout row>
+    <v-flex xs12 sm6 offset-sm3>
+      <v-card>
+        <v-toolbar color="teal" dark>
+          <v-toolbar-side-icon></v-toolbar-side-icon>
+
+          <v-toolbar-title>Items</v-toolbar-title>
+
+          <v-spacer></v-spacer>
+
+          <v-btn icon>
+            <v-icon>more_vert</v-icon>
+          </v-btn>
+        </v-toolbar>
+
+        <v-list>
+          <v-list-group
+            v-for="item in items"
+            :key="item.id"
+            :prepend-icon="item.type"
+            no-action
+          >
+            <template v-slot:activator>
+              <v-list-tile>
+                <v-list-tile-content>
+                  <v-list-tile-title>{{ item.name }}</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </template>
+
+            <v-list-tile>
+              <v-list-tile-content>
+                <v-list-tile-title>{{ item.brand }}</v-list-tile-title>
+              </v-list-tile-content>
+
+              <v-list-tile-action>
+                <v-icon>{{ item.type }}</v-icon>
+              </v-list-tile-action>
+            </v-list-tile>
+          </v-list-group>
+        </v-list>
+      </v-card>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script lang="ts">

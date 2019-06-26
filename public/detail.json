@@ -2,7 +2,7 @@
     {
         "name": "almonds",
         "brand": "blue diamond",
-        "type": "food",
+        "type": "restaurant",
         "price": 12.10,
         "quantity": 2,
         "weight": 12,
@@ -12,7 +12,7 @@
     {
         "name": "soda",
         "brand": "pepsi",
-        "type": "drink",
+        "type": "local_drink",
         "price": 2.99,
         "quantity": 1,
         "weight": 20,
@@ -22,7 +22,7 @@
     {
         "name": "chicken",
         "brand": "great value",
-        "type": "food",
+        "type": "restaurant",
         "price": 11.23,
         "quantity": 1,
         "weight": 16,
@@ -32,7 +32,7 @@
     {
         "name": "spinach",
         "brand": "market pantry",
-        "type": "food",
+        "type": "restaurant",
         "price": 2.10,
         "quantity": 1,
         "weight": 4,
