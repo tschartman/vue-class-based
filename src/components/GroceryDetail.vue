@@ -14,35 +14,27 @@
           </v-btn>
         </v-toolbar>
 
-        <v-list>
-          <v-list-group
+        <v-expansion-panel
+        v-model="panel"
+        expand
+        >
+          <v-expansion-panel-content
             v-for="item in items"
             :key="item.id"
-            :prepend-icon="item.type"
-            no-action
           >
-            <template v-slot:activator>
-              <v-list-tile>
-                <v-list-tile-content>
-                  <v-list-tile-title>{{ item.name }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
+            <template v-slot:header>
+              <div>{{ item.brand }} {{ item.name }} - {{ item.weight }} Oz</div>
             </template>
 
-            <v-list-tile>
-              <v-list-tile-content>
-                <v-list-tile-title>{{ item.brand }}</v-list-tile-title>
-              </v-list-tile-content>
-
-              <v-list-tile-action>
-                <v-icon>{{ item.type }}</v-icon>
-              </v-list-tile-action>
-            </v-list-tile>
-          </v-list-group>
-        </v-list>
+            <v-card>
+              <v-card-text>x{{ item.quantity }} at {{ item.price | toCurrency }} each -  {{ (item.price * item.quantity) | toCurrency }}</v-card-text>
+              <v-card-text>({{ item.price / item.weight | toCurrency }} per Oz)</v-card-text>    
+            </v-card>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
       </v-card>
     </v-flex>
-  </v-layout>
+ </v-layout>
 </template>
 
 <script lang="ts">
